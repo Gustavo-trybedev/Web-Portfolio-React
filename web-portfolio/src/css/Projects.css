@@ -1,4 +1,5 @@
-:root {
+
+/* :root {
     --cor-bg-principal: #ffffff80;
     --smooth-black: #00000040;
     --smooth-white: #ffffffc4;
@@ -6,25 +7,17 @@
     --title: #1a1717;
     --url: #0014f3ac;
   }
+  */
 
 .main {
     display: flex;
-    flex-flow: row;
-    overflow-x: scroll;
-    justify-content: flex-start;
-    align-items: center;
-    height: 70vh;
+    flex-flow:row;
+    justify-content:baseline;
     gap: 10px;
-    z-index: 0;
-    padding: 0 10px;
-    box-shadow: 4px 15px 15px -15px var(--vampire-black);
-    background-image: url('../data/gitHutBG.jpg');
-    width: 100%;
-    height: 100vh;
-    background-position:center;
-    background-size: cover;
+    overflow-x: scroll;
+    
 }
-
+/*
 .repo-card {
     background: var(--cor-bg-principal);
     -webkit-backdrop-filter: blur(10px);
@@ -86,4 +79,4 @@
     flex-direction: column;
     justify-content: flex-end;
     cursor: pointer;
-}
+} */

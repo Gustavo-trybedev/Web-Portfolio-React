@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getMyReposFromGithub } from '../api';
 import Loading from './Loading';
+import Card from './Card';
 
   function Projects() {
 
@@ -23,26 +24,37 @@ import Loading from './Loading';
     { loading ? (
       <Loading />
     ) : ( reposList.map((repo) => {
-      const { name, description, html_url, id } = repo;
+      const { name, description, html_url } = repo;
       return (
-        <section key={ id } className="repo-card">
-          <section className="repo-title-container">
-          <h3 className="repo-title">{ name }</h3>
-          </section>
-          <section className="repo-description-container">
-          <p className="repo-description">{ description }</p>
-          </section>
-          <section className="repo_url_container">
-          <a
-          target="_blank"
-          href={ html_url }
-          rel="noreferrer"
-          className="repo-url"
-          >
-            Visite o repositório
-          </a>
-          </section>
+        <section>
+          <Card 
+          cardTitle={ name }
+          cardDescription= { description }
+          imgSRC="https://i.imgur.com/zoCdbtF.jpg"
+          cardAlt={ name }
+          repoLink={ html_url }
+          />
         </section>
+
+
+        // <section key={ id } className="repo-card">
+        //   <section className="repo-title-container">
+        //   <h3 className="repo-title">{ name }</h3>
+        //   </section>
+        //   <section className="repo-description-container">
+        //   <p className="repo-description">{ description }</p>
+        //   </section>
+        //   <section className="repo_url_container">
+        //   <a
+        //   target="_blank"
+        //   href={ html_url }
+        //   rel="noreferrer"
+        //   className="repo-url"
+        //   >
+        //     Visite o repositório
+        //   </a>
+        //   </section>
+        // </section>
       )
     }))}
   </section>
